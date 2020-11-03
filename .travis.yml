@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t olagunju/docker-react -f Dockerfile .
+  - docker build -t olagunju/docker-react  .
 
 script:
   - docker run olagunju/docker-react
