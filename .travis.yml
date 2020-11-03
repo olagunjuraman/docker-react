@@ -4,10 +4,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t olagunju/docker-react  .
+  - docker build -t olagunju/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true olagunju/docker-react
+  - docker run -e CI=true olagunju/docker-react npm run test
 
 deploy:
   provider: elasticbeanstalk
